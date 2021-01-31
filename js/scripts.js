@@ -141,15 +141,15 @@ $(document).ready(function () {
 
 
     /********************** Open Google Maps **********************/
-    function myNavFunc(){
+    $('#btn-show-map').click(function () {
         // If it's an iPhone..
         if( (navigator.platform.indexOf("iPhone") != -1) 
             || (navigator.platform.indexOf("iPod") != -1)
             || (navigator.platform.indexOf("iPad") != -1))
-             window.open("maps://www.google.com/maps/dir/?api=1&travelmode=driving&layer=traffic&destination=[YOUR_LAT],[YOUR_LNG]");
+             window.open("maps://www.google.com/maps/dir//26.9441802,80.9312678/@26.9441759,80.8962484,13z/data=!4m2!4m1!3e0?hl=en");
         else
-             window.open("https://www.google.com/maps/dir/?api=1&travelmode=driving&layer=traffic&destination=[YOUR_LAT],[YOUR_LNG]");
-    }
+             window.open("https://www.google.com/maps/dir//26.9441802,80.9312678/@26.9441759,80.8962484,13z/data=!4m2!4m1!3e0?hl=en");
+    });
 
     /********************** Add to Calendar **********************/
     var myCalendar = createCalendar({
