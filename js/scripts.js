@@ -160,23 +160,23 @@ $(document).ready(function () {
         },
         data: {
             // Event title
-            title: "Ram and Antara's Wedding",
+            title: "Sushant and Ritu's Wedding",
 
             // Event start date
-            start: new Date('Nov 27, 2017 10:00'),
+            start: new Date('April 24, 2021 10:00'),
 
             // Event duration (IN MINUTES)
             // duration: 120,
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('Nov 29, 2017 00:00'),
+            end: new Date('April 25, 2021 00:00'),
 
             // Event Address
-            address: 'ITC Fortune Park Hotel, Kolkata',
+            address: 'Brij Ki Rasoi, Sitapur Road near Sewa hospital, Kamalabad Barhauli, Uttar Pradesh 226201',
 
             // Event Description
-            description: "We can't wait to see you on our big day. For any queries or issues, please contact Mr. Amit Roy at +91 9876543210."
+            description: "We can't wait to see you on our big day. For any queries or issues, please contact Mr. Varun at +916387084848."
         }
     });
 
@@ -194,7 +194,7 @@ $(document).ready(function () {
             && MD5($('#invite_code').val()) !== '8f9c0756ec4389a323e9050c76300142') {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
-            $.post('https://script.google.com/macros/s/AKfycbyFSlmKYw5LFHnzLUGx0BRo8B2UtSblsZGSo_4wrmw9lqYlOA/exec', data)
+            $.post('https://script.google.com/macros/s/AKfycbxA-l7TMiBaWnkaXHQYqN9kJUaHdACd5526JE1I9LC7YObaonFZ1V9O/exec', data)
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
@@ -205,6 +205,7 @@ $(document).ready(function () {
                     }
                 })
                 .fail(function (data) {
+                    console.log("Errors")
                     console.log(data);
                     $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
                 });
